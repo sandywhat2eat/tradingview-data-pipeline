@@ -98,13 +98,25 @@ def fetch_stock_data():
     columns = ['symbol', 'sector', 'industry', 'market_capitalization'] + list(ALL_METRICS.keys())
     columns_str = ','.join(columns)
 
-    response = supabase.table('stock_data').select(columns_str).execute()
+    # Fetch all records (Supabase default limit is 1000, so we paginate)
+    all_data = []
+    offset = 0
+    batch_size = 1000
 
-    if not response.data:
+    while True:
+        response = supabase.table('stock_data').select(columns_str).range(offset, offset + batch_size - 1).execute()
+        if not response.data:
+            break
+        all_data.extend(response.data)
+        if len(response.data) < batch_size:
+            break
+        offset += batch_size
+
+    if not all_data:
         logging.error("No data found in stock_data table")
         return pd.DataFrame()
 
-    df = pd.DataFrame(response.data)
+    df = pd.DataFrame(all_data)
     logging.info(f"Fetched {len(df)} records from stock_data")
     return df
 
