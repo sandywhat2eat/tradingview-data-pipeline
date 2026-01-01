@@ -31,10 +31,11 @@ from supabase import create_client, Client
 import json
 from datetime import datetime
 import re
+import platform
 
 # --- Logging Setup ---
 logging.basicConfig(
-    level=logging.INFO, 
+    level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler('industrymerged.log'),
@@ -42,8 +43,11 @@ logging.basicConfig(
     ]
 )
 
-# Load environment variables from specific .env file path
-load_dotenv('/root/.env')
+# Load environment variables based on platform
+if platform.system() == 'Darwin':  # macOS
+    load_dotenv('/Users/jaykrish/Documents/digitalocean/.env')
+else:  # Server (Linux)
+    load_dotenv('/root/.env')
 
 # Supabase configuration from environment variables
 supabase_url = "https://aisqbjjpdztnuerniefl.supabase.co"
