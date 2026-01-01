@@ -1,0 +1,104 @@
+2026-01-01 12:41:31,285 - ERROR - SUPABASE_SERVICE_ROLE_KEY not found in environment variables
+2026-01-01 12:43:27,788 - ERROR - SUPABASE_SERVICE_ROLE_KEY not found in environment variables
+2026-01-01 12:43:59,788 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:43:59,789 - ERROR - Failed to initialize WebDriver: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2026-01-01 12:43:59,789 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:43:59,789 - ERROR - Failed to extract any data
+2026-01-01 12:47:40,975 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:47:41,002 - INFO - ====== WebDriver manager ======
+2026-01-01 12:47:41,303 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:47:43,491 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:47:44,380 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:47:44,602 - ERROR - Failed to initialize WebDriver: Message: session not created
+from unknown error: no chrome binary at /usr/bin/chromium-browser; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x00000001052f0b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x00000001052e8b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000104de2b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000104e13f1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 275940
+4   chromedriver                        0x0000000104e1305c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+5   chromedriver                        0x0000000104e56e8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+6   chromedriver                        0x0000000104e568cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+7   chromedriver                        0x0000000104e1e16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+8   chromedriver                        0x00000001052b4098 cxxbridge1$str$ptr + 2785128
+9   chromedriver                        0x00000001052b7804 cxxbridge1$str$ptr + 2799316
+10  chromedriver                        0x0000000105294850 cxxbridge1$str$ptr + 2656032
+11  chromedriver                        0x00000001052b8074 cxxbridge1$str$ptr + 2801476
+12  chromedriver                        0x00000001052851cc cxxbridge1$str$ptr + 2592924
+13  chromedriver                        0x00000001052d7cb4 cxxbridge1$str$ptr + 2931588
+14  chromedriver                        0x00000001052d7e34 cxxbridge1$str$ptr + 2931972
+15  chromedriver                        0x00000001052e8788 cxxbridge1$str$ptr + 2999896
+16  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:47:44,602 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:47:44,602 - ERROR - Failed to extract any data
+2026-01-01 12:49:18,361 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:49:18,383 - INFO - ====== WebDriver manager ======
+2026-01-01 12:49:18,539 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:49:18,864 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:49:19,231 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:50:21,189 - ERROR - Failed to initialize WebDriver: Message: session not created
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x00000001012e0b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x00000001012d8b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000100dd2970 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73784
+3   chromedriver                        0x0000000100dc0be0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 680
+4   chromedriver                        0x0000000100e0a3c4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 301708
+5   chromedriver                        0x0000000100e06898 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 286560
+6   chromedriver                        0x0000000100e0305c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+7   chromedriver                        0x0000000100e46e8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+8   chromedriver                        0x0000000100e468cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+9   chromedriver                        0x0000000100e0e16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+10  chromedriver                        0x00000001012a4098 cxxbridge1$str$ptr + 2785128
+11  chromedriver                        0x00000001012a7804 cxxbridge1$str$ptr + 2799316
+12  chromedriver                        0x0000000101284850 cxxbridge1$str$ptr + 2656032
+13  chromedriver                        0x00000001012a8074 cxxbridge1$str$ptr + 2801476
+14  chromedriver                        0x00000001012751cc cxxbridge1$str$ptr + 2592924
+15  chromedriver                        0x00000001012c7cb4 cxxbridge1$str$ptr + 2931588
+16  chromedriver                        0x00000001012c7e34 cxxbridge1$str$ptr + 2931972
+17  chromedriver                        0x00000001012d8788 cxxbridge1$str$ptr + 2999896
+18  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:50:21,189 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:50:21,189 - ERROR - Failed to extract any data
+2026-01-01 12:51:03,554 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:51:03,573 - INFO - ====== WebDriver manager ======
+2026-01-01 12:51:03,756 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:51:04,085 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:51:04,273 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:52:04,704 - ERROR - Failed to initialize WebDriver: Message: session not created
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x0000000103514b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x000000010350cb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000103006970 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73784
+3   chromedriver                        0x0000000102ff4be0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 680
+4   chromedriver                        0x000000010303e3c4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 301708
+5   chromedriver                        0x000000010303a898 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 286560
+6   chromedriver                        0x000000010303705c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+7   chromedriver                        0x000000010307ae8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+8   chromedriver                        0x000000010307a8cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+9   chromedriver                        0x000000010304216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+10  chromedriver                        0x00000001034d8098 cxxbridge1$str$ptr + 2785128
+11  chromedriver                        0x00000001034db804 cxxbridge1$str$ptr + 2799316
+12  chromedriver                        0x00000001034b8850 cxxbridge1$str$ptr + 2656032
+13  chromedriver                        0x00000001034dc074 cxxbridge1$str$ptr + 2801476
+14  chromedriver                        0x00000001034a91cc cxxbridge1$str$ptr + 2592924
+15  chromedriver                        0x00000001034fbcb4 cxxbridge1$str$ptr + 2931588
+16  chromedriver                        0x00000001034fbe34 cxxbridge1$str$ptr + 2931972
+17  chromedriver                        0x000000010350c788 cxxbridge1$str$ptr + 2999896
+18  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:52:04,704 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:52:04,704 - ERROR - Failed to extract any data
+2026-01-01 12:59:31,102 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:59:31,103 - ERROR - Failed to initialize WebDriver: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2026-01-01 12:59:31,103 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:59:31,103 - ERROR - Failed to extract any data
+2026-01-01 13:09:06,716 - INFO - Starting TradingView sector data extraction...
