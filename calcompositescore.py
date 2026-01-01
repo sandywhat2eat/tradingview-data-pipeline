@@ -51,14 +51,25 @@ def fetch_stock_data():
     """Fetch stock data from Supabase"""
     logging.info("Fetching stock data from Supabase...")
 
-    # Fetch all stock data
-    response = supabase.table('stock_data').select('*').execute()
+    # Fetch all records with pagination (Supabase default limit is 1000)
+    all_data = []
+    offset = 0
+    batch_size = 1000
 
-    if not response.data:
+    while True:
+        response = supabase.table('stock_data').select('*').range(offset, offset + batch_size - 1).execute()
+        if not response.data:
+            break
+        all_data.extend(response.data)
+        if len(response.data) < batch_size:
+            break
+        offset += batch_size
+
+    if not all_data:
         logging.error("No data found in stock_data table")
         return pd.DataFrame()
 
-    df = pd.DataFrame(response.data)
+    df = pd.DataFrame(all_data)
     logging.info(f"Fetched {len(df)} records from stock_data")
     return df
 
