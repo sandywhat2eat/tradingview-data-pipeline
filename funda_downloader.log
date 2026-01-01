@@ -1,0 +1,25 @@
+2026-01-01 11:08:59,441 - INFO - Deleting existing CSV files...
+2026-01-01 11:08:59,441 - INFO - Deleted: funda_2026-01-01.csv
+2026-01-01 11:08:59,442 - INFO - Deleted: Technicals M_2025-12-31.csv
+2026-01-01 11:08:59,461 - WARNING - Virtual display setup failed: [Errno 2] No such file or directory: 'Xvfb'
+2026-01-01 11:08:59,461 - INFO - ====== WebDriver manager ======
+2026-01-01 11:08:59,842 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 11:09:00,055 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 11:09:01,296 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 11:09:02,514 - INFO - WebDriver version 143.0.7499.169 selected
+2026-01-01 11:09:02,517 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.169/mac-arm64/chromedriver-mac-arm64.zip
+2026-01-01 11:09:02,517 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/143.0.7499.169/mac-arm64/chromedriver-mac-arm64.zip
+2026-01-01 11:09:02,611 - INFO - Driver downloading response is 200
+2026-01-01 11:09:10,451 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 11:09:10,793 - INFO - Driver has been saved in cache [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169]
+2026-01-01 11:09:12,144 - INFO - WebDriver initialized. Downloads: /Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_downloads
+2026-01-01 11:09:25,494 - INFO - Added 11 cookies
+2026-01-01 11:09:30,634 - INFO - Navigating to: https://www.tradingview.com/screener/0BmeuiW6/
+2026-01-01 11:09:38,680 - INFO - Clicking menu trigger...
+2026-01-01 11:09:39,294 - INFO - Menu triggered
+2026-01-01 11:09:41,315 - INFO - Found export button: Download results as CSV
+2026-01-01 11:09:41,848 - INFO - Export button clicked
+2026-01-01 11:09:46,854 - INFO - Waiting for download in '/Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_downloads'...
+2026-01-01 11:11:47,098 - ERROR - Download timeout
+2026-01-01 11:11:47,100 - ERROR - Download failed
+2026-01-01 11:11:48,235 - INFO - WebDriver closed
