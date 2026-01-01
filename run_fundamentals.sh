@@ -20,22 +20,15 @@ UPLOADED=$(grep -o "Successful: [0-9]*" /mnt/volume_blr1_01/tradingview_pipeline
 
 # Send Discord notification
 if [ $EXIT_CODE -eq 0 ]; then
-  MESSAGE="✅ **Fundamentals Pipeline Success** ($TIMESTAMP)
-
-$RECORDS
-$UPLOADED
-Status: All steps completed"
+  MESSAGE="✅ **Fundamentals Pipeline Success** ($TIMESTAMP) | $RECORDS | $UPLOADED | Status: Completed"
 
   curl -X POST "$WEBHOOK_URL" \
     -H "Content-Type: application/json" \
-    -d "{\"content\":\"$MESSAGE\"}" 2>/dev/null
+    --data-raw "{\"content\":\"$MESSAGE\"}" 2>/dev/null
 else
-  MESSAGE="❌ **Fundamentals Pipeline Failed** ($TIMESTAMP)
-
-Exit Code: $EXIT_CODE
-Check logs: /mnt/volume_blr1_01/logs/funda_pipeline.log"
+  MESSAGE="❌ **Fundamentals Pipeline Failed** ($TIMESTAMP) | Exit Code: $EXIT_CODE | Check logs for details"
 
   curl -X POST "$WEBHOOK_URL" \
     -H "Content-Type: application/json" \
-    -d "{\"content\":\"$MESSAGE\"}" 2>/dev/null
+    --data-raw "{\"content\":\"$MESSAGE\"}" 2>/dev/null
 fi
