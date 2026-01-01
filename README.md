@@ -38,6 +38,96 @@ funda_downloader.py → funda_uploadtodb.py
 - Financial Health: Cash, Debt ratios, liquidity ratios
 - Ownership: Shares outstanding, Float %
 
+## Folder Structure & Git Setup
+
+### Current Deployment
+The pipeline is deployed on server with space optimization:
+
+```
+/root/tradingview_pipeline/             ← SYMLINK (shortcut for easy access)
+                    ↓
+/mnt/volume_blr1_01/tradingview_pipeline/ ← ACTUAL FILES (main location)
+                    ↓
+git repo: https://github.com/sandywhat2eat/tradingview-data-pipeline.git
+```
+
+**Why symlink?**
+- Root disk is limited (24G total, ~76% full)
+- `/mnt/volume_blr1_01` has 25G with 48% used (plenty of space)
+- Symlink allows access via `/root/tradingview_pipeline` while files live on `/mnt`
+
+### Directory Layout
+
+```
+/mnt/volume_blr1_01/
+├── tradingview_pipeline/           ← Main project folder
+│   ├── .git/                       ← Git repository (connected to GitHub)
+│   ├── tradingview_downloader.py   ← Technical data downloader
+│   ├── funda_downloader.py         ← Fundamental data downloader
+│   ├── uploadtodb.py               ← Upload to Supabase
+│   ├── calcompositescore.py        ← Calculate composite scores
+│   ├── run_technical.sh            ← Cron wrapper (technical pipeline)
+│   ├── run_fundamentals.sh         ← Cron wrapper (fundamentals pipeline)
+│   ├── setup_crons.sh              ← Cron installation script
+│   ├── tradingview_downloads/      ← Downloaded CSV files
+│   ├── cookies.json                ← TradingView session cookies
+│   └── logs/                       ← Execution logs (from cron jobs)
+└── venv/                           ← Python virtual environment
+    └── bin/python3                 ← Python executable (Python 3.12.7)
+```
+
+### Working with Git
+
+**From GitHub (making changes on laptop):**
+
+1. Clone the repo:
+```bash
+git clone https://github.com/sandywhat2eat/tradingview-data-pipeline.git
+cd tradingview-data-pipeline
+```
+
+2. Make changes (edit files like `tradingview_downloader.py`)
+
+3. Commit and push:
+```bash
+git add .
+git commit -m "Your changes here"
+git push origin main
+```
+
+**On Server (fetch and deploy changes):**
+
+```bash
+# Navigate to the project
+cd /mnt/volume_blr1_01/tradingview_pipeline
+# OR use symlink
+cd /root/tradingview_pipeline
+
+# Check current status
+git status
+
+# Fetch latest changes from GitHub
+git fetch origin
+
+# View what changed
+git diff origin/main
+
+# Update to latest version
+git pull origin main
+
+# Then run the updated script
+/mnt/volume_blr1_01/venv/bin/python3 tradingview_downloader.py
+```
+
+**Quick Reference:**
+
+| Task | Command |
+|------|---------|
+| Check git status | `git -C /mnt/volume_blr1_01/tradingview_pipeline status` |
+| Fetch from GitHub | `git -C /mnt/volume_blr1_01/tradingview_pipeline pull origin main` |
+| View git log | `git -C /mnt/volume_blr1_01/tradingview_pipeline log --oneline -5` |
+| Check remote URL | `git -C /mnt/volume_blr1_01/tradingview_pipeline remote -v` |
+
 ## Server Deployment & Cron Scheduling
 
 ### Prerequisites
@@ -66,36 +156,84 @@ python3 funda_downloader.py
 
 ### Cron Schedule
 
-Add to crontab (`crontab -e`):
+**Current Setup (Installed):**
 
 ```bash
-# Technical data: Daily at 6 PM IST (after market close)
-0 18 * * 1-5 cd /root/tradingview_pipeline && /usr/bin/python3 tradingview_downloader.py >> /root/logs/technical_pipeline.log 2>&1
+# Technical data: Mon-Fri at 12:30 IST (7:00 AM UTC) - Morning run
+0 7 * * 1-5 /mnt/volume_blr1_01/tradingview_pipeline/run_technical.sh >> /mnt/volume_blr1_01/logs/technical_pipeline.log 2>&1
 
-# Fundamental data: Weekly on Sunday at 8 PM IST
-0 20 * * 0 cd /root/tradingview_pipeline && /usr/bin/python3 funda_downloader.py >> /root/logs/funda_pipeline.log 2>&1
+# Fundamental data: Every Sunday at 2:30 PM UTC (8:00 PM IST) - Weekly run
+30 14 * * 0 /mnt/volume_blr1_01/tradingview_pipeline/run_fundamentals.sh >> /mnt/volume_blr1_01/logs/funda_pipeline.log 2>&1
+```
+
+**To add manually:**
+
+```bash
+crontab -e
+
+# Then add the above lines
+```
+
+**To view current crons:**
+
+```bash
+crontab -l
 ```
 
 **Notes:**
-- Technical data runs Mon-Fri (daily market data)
-- Fundamental data runs weekly (less frequent updates)
+- Technical data runs Mon-Fri at 12:30 IST (7:00 AM UTC) - uses wrapper script
+- Fundamental data runs Sunday at 8:00 PM IST (2:30 PM UTC) - uses wrapper script
+- `run_technical.sh` and `run_fundamentals.sh` automatically activate venv and run scripts
 - `tradingview_downloader.py` automatically calls `uploadtodb.py` and `calcompositescore.py`
 - `funda_downloader.py` automatically calls `funda_uploadtodb.py`
+- Logs saved to `/mnt/volume_blr1_01/logs/` (accessible via `/root/tradingview_pipeline/logs/`)
 
-### Create Log Directory
+### Wrapper Scripts
 
+**run_technical.sh:**
 ```bash
-mkdir -p /root/logs
+#!/bin/bash
+source /mnt/volume_blr1_01/venv/bin/activate
+cd /mnt/volume_blr1_01/tradingview_pipeline
+/mnt/volume_blr1_01/venv/bin/python3 tradingview_downloader.py
+```
+
+**run_fundamentals.sh:**
+```bash
+#!/bin/bash
+source /mnt/volume_blr1_01/venv/bin/activate
+cd /mnt/volume_blr1_01/tradingview_pipeline
+/mnt/volume_blr1_01/venv/bin/python3 funda_downloader.py
 ```
 
 ### Manual Runs
 
 ```bash
-# Technical pipeline (full chain)
-python3 tradingview_downloader.py
+# Using venv directly
+/mnt/volume_blr1_01/venv/bin/python3 /mnt/volume_blr1_01/tradingview_pipeline/tradingview_downloader.py
+
+# OR using wrapper script
+/mnt/volume_blr1_01/tradingview_pipeline/run_technical.sh
 
 # Fundamentals pipeline
-python3 funda_downloader.py
+/mnt/volume_blr1_01/venv/bin/python3 /mnt/volume_blr1_01/tradingview_pipeline/funda_downloader.py
+
+# OR using wrapper script
+/mnt/volume_blr1_01/tradingview_pipeline/run_fundamentals.sh
+```
+
+### View Logs
+
+```bash
+# Technical pipeline logs
+tail -f /mnt/volume_blr1_01/logs/technical_pipeline.log
+
+# Fundamentals pipeline logs
+tail -f /mnt/volume_blr1_01/logs/funda_pipeline.log
+
+# Detailed script logs
+tail -f /mnt/volume_blr1_01/tradingview_pipeline/tradingview_downloader.log
+tail -f /mnt/volume_blr1_01/tradingview_pipeline/funda_downloader.log
 ```
 
 ## Database Schema
