@@ -52,7 +52,7 @@ print(f"Using Supabase database: {supabase_url}")
 
 # Configuration
 COOKIES_FILE_NAME = "cookies.json"
-TARGET_URL = "https://in.tradingview.com/news-flow/?market=stock&market_country=in"
+TARGET_URL = "https://www.tradingview.com/news-flow/j1vPNkYi?market_country=in&market=stock,economic&economic_category=gdp,labor,prices,health,money,trade,government,business,consumer,housing,taxes"
 
 
 def setup_driver():
