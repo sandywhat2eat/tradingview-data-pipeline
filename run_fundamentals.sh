@@ -9,9 +9,19 @@ LOG_FILE="/mnt/volume_blr1_01/logs/funda_pipeline.log"
 source /mnt/volume_blr1_01/venv/bin/activate
 cd $SCRIPT_DIR
 
-# Run the script and capture output
-OUTPUT=$(/mnt/volume_blr1_01/venv/bin/python3 funda_downloader.py 2>&1)
-EXIT_CODE=$?
+# Run the scripts and capture output
+/mnt/volume_blr1_01/venv/bin/python3 funda_downloader.py 2>&1
+FUNDA_EXIT=$?
+
+/mnt/volume_blr1_01/venv/bin/python3 calfundamentalscore.py 2>&1
+SCORE_EXIT=$?
+
+# Use worst exit code
+if [ $FUNDA_EXIT -ne 0 ] || [ $SCORE_EXIT -ne 0 ]; then
+  EXIT_CODE=1
+else
+  EXIT_CODE=0
+fi
 
 # Extract key info from logs
 TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
