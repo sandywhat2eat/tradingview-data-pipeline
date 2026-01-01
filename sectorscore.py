@@ -13,12 +13,16 @@ import logging
 from dotenv import load_dotenv
 from supabase import create_client, Client
 from datetime import datetime
+import platform
 
 # Get current script directory
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Load environment variables from root .env file
-load_dotenv('/root/.env')
+# Load environment variables based on platform
+if platform.system() == 'Darwin':  # macOS
+    load_dotenv('/Users/jaykrish/Documents/digitalocean/.env')
+else:  # Server (Linux)
+    load_dotenv('/root/.env')
 
 # Setup logging
 logging.basicConfig(
@@ -32,7 +36,7 @@ logging.basicConfig(
 
 # Supabase configuration from environment variables
 url = os.getenv("SUPABASE_URL")
-key = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
+key = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_ANON_KEY")
 
 if not all([url, key]):
     logging.error("Missing Supabase environment variables. Please check .env file.")

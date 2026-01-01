@@ -1,0 +1,135 @@
+2026-01-01 12:41:31,285 - ERROR - SUPABASE_SERVICE_ROLE_KEY not found in environment variables
+2026-01-01 12:43:27,788 - ERROR - SUPABASE_SERVICE_ROLE_KEY not found in environment variables
+2026-01-01 12:43:59,788 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:43:59,789 - ERROR - Failed to initialize WebDriver: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2026-01-01 12:43:59,789 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:43:59,789 - ERROR - Failed to extract any data
+2026-01-01 12:47:40,975 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:47:41,002 - INFO - ====== WebDriver manager ======
+2026-01-01 12:47:41,303 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:47:43,491 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:47:44,380 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:47:44,602 - ERROR - Failed to initialize WebDriver: Message: session not created
+from unknown error: no chrome binary at /usr/bin/chromium-browser; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x00000001052f0b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x00000001052e8b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000104de2b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x0000000104e13f1c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 275940
+4   chromedriver                        0x0000000104e1305c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+5   chromedriver                        0x0000000104e56e8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+6   chromedriver                        0x0000000104e568cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+7   chromedriver                        0x0000000104e1e16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+8   chromedriver                        0x00000001052b4098 cxxbridge1$str$ptr + 2785128
+9   chromedriver                        0x00000001052b7804 cxxbridge1$str$ptr + 2799316
+10  chromedriver                        0x0000000105294850 cxxbridge1$str$ptr + 2656032
+11  chromedriver                        0x00000001052b8074 cxxbridge1$str$ptr + 2801476
+12  chromedriver                        0x00000001052851cc cxxbridge1$str$ptr + 2592924
+13  chromedriver                        0x00000001052d7cb4 cxxbridge1$str$ptr + 2931588
+14  chromedriver                        0x00000001052d7e34 cxxbridge1$str$ptr + 2931972
+15  chromedriver                        0x00000001052e8788 cxxbridge1$str$ptr + 2999896
+16  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+17  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:47:44,602 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:47:44,602 - ERROR - Failed to extract any data
+2026-01-01 12:49:18,361 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:49:18,383 - INFO - ====== WebDriver manager ======
+2026-01-01 12:49:18,539 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:49:18,864 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:49:19,231 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:50:21,189 - ERROR - Failed to initialize WebDriver: Message: session not created
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x00000001012e0b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x00000001012d8b30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000100dd2970 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73784
+3   chromedriver                        0x0000000100dc0be0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 680
+4   chromedriver                        0x0000000100e0a3c4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 301708
+5   chromedriver                        0x0000000100e06898 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 286560
+6   chromedriver                        0x0000000100e0305c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+7   chromedriver                        0x0000000100e46e8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+8   chromedriver                        0x0000000100e468cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+9   chromedriver                        0x0000000100e0e16c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+10  chromedriver                        0x00000001012a4098 cxxbridge1$str$ptr + 2785128
+11  chromedriver                        0x00000001012a7804 cxxbridge1$str$ptr + 2799316
+12  chromedriver                        0x0000000101284850 cxxbridge1$str$ptr + 2656032
+13  chromedriver                        0x00000001012a8074 cxxbridge1$str$ptr + 2801476
+14  chromedriver                        0x00000001012751cc cxxbridge1$str$ptr + 2592924
+15  chromedriver                        0x00000001012c7cb4 cxxbridge1$str$ptr + 2931588
+16  chromedriver                        0x00000001012c7e34 cxxbridge1$str$ptr + 2931972
+17  chromedriver                        0x00000001012d8788 cxxbridge1$str$ptr + 2999896
+18  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:50:21,189 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:50:21,189 - ERROR - Failed to extract any data
+2026-01-01 12:51:03,554 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:51:03,573 - INFO - ====== WebDriver manager ======
+2026-01-01 12:51:03,756 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:51:04,085 - INFO - Get LATEST chromedriver version for google-chrome
+2026-01-01 12:51:04,273 - INFO - Driver [/Users/jaykrish/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+2026-01-01 12:52:04,704 - ERROR - Failed to initialize WebDriver: Message: session not created
+from chrome not reachable; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+0   chromedriver                        0x0000000103514b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x000000010350cb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x0000000103006970 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 73784
+3   chromedriver                        0x0000000102ff4be0 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 680
+4   chromedriver                        0x000000010303e3c4 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 301708
+5   chromedriver                        0x000000010303a898 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 286560
+6   chromedriver                        0x000000010303705c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 272164
+7   chromedriver                        0x000000010307ae8c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 550228
+8   chromedriver                        0x000000010307a8cc _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 548756
+9   chromedriver                        0x000000010304216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+10  chromedriver                        0x00000001034d8098 cxxbridge1$str$ptr + 2785128
+11  chromedriver                        0x00000001034db804 cxxbridge1$str$ptr + 2799316
+12  chromedriver                        0x00000001034b8850 cxxbridge1$str$ptr + 2656032
+13  chromedriver                        0x00000001034dc074 cxxbridge1$str$ptr + 2801476
+14  chromedriver                        0x00000001034a91cc cxxbridge1$str$ptr + 2592924
+15  chromedriver                        0x00000001034fbcb4 cxxbridge1$str$ptr + 2931588
+16  chromedriver                        0x00000001034fbe34 cxxbridge1$str$ptr + 2931972
+17  chromedriver                        0x000000010350c788 cxxbridge1$str$ptr + 2999896
+18  libsystem_pthread.dylib             0x000000018706fc0c _pthread_start + 136
+19  libsystem_pthread.dylib             0x000000018706ab80 thread_start + 8
+
+2026-01-01 12:52:04,704 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:52:04,704 - ERROR - Failed to extract any data
+2026-01-01 12:59:31,102 - INFO - Starting TradingView sector data extraction...
+2026-01-01 12:59:31,103 - ERROR - Failed to initialize WebDriver: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+
+2026-01-01 12:59:31,103 - ERROR - Failed to initialize WebDriver. Exiting.
+2026-01-01 12:59:31,103 - ERROR - Failed to extract any data
+2026-01-01 13:09:06,716 - INFO - Starting TradingView sector data extraction...
+2026-01-01 13:10:00,862 - INFO - Starting TradingView sector data extraction...
+2026-01-01 13:10:02,415 - INFO - WebDriver initialized successfully
+2026-01-01 13:10:02,415 - INFO - Navigating to base domain https://www.tradingview.com to set cookies.
+2026-01-01 13:10:13,892 - INFO - Extracted cookie list from 'cookies' key in cookies.json.
+2026-01-01 13:10:13,912 - INFO - Added 11 cookies out of 11 total cookies
+2026-01-01 13:10:13,912 - INFO - Navigating to target URL: https://in.tradingview.com/markets/stocks-india/sectorandindustry-sector/
+2026-01-01 13:10:29,710 - INFO - Successfully navigated to the sector page
+2026-01-01 13:10:29,762 - INFO - Initial screenshot saved to /Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_initial.png
+2026-01-01 13:10:29,783 - INFO - Extracting Overview data...
+2026-01-01 13:10:29,785 - INFO - JavaScript extraction for overview: Found 20 rows
+2026-01-01 13:10:29,788 - INFO - Overview columns: ['Change\xa0%', 'Div yield\xa0% (indicated)', 'Industries', 'Market cap', 'Sector', 'Stocks', 'Volume']
+2026-01-01 13:10:29,791 - INFO - Clicking on Performance tab...
+2026-01-01 13:10:34,896 - INFO - Performance tab screenshot saved to /Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_performance.png
+2026-01-01 13:10:34,896 - INFO - Extracting Performance data...
+2026-01-01 13:10:34,899 - INFO - JavaScript extraction for performance: Found 20 rows
+2026-01-01 13:10:34,899 - INFO - Performance columns: ['Change\xa0%', 'Perf\xa0%10Y', 'Perf\xa0%1M', 'Perf\xa0%1W', 'Perf\xa0%1Y', 'Perf\xa0%3M', 'Perf\xa0%5Y', 'Perf\xa0%6M', 'Perf\xa0%All Time', 'Perf\xa0%YTD', 'Sector']
+2026-01-01 13:10:35,021 - INFO - WebDriver closed
+2026-01-01 13:10:35,026 - INFO - Merged dataframe has 20 rows and 17 columns
+2026-01-01 13:10:35,028 - INFO - Cleaned column names: ['Change %_overview', 'Div yield % (indicated)', 'Industries', 'Market cap', 'Stocks', 'Volume', 'Change %_performance', 'Perf %10Y', 'Perf %1M', 'Perf %1W', 'Perf %1Y', 'Perf %3M', 'Perf %5Y', 'Perf %6M', 'Perf %All Time', 'Perf %YTD', 'Sector']
+2026-01-01 13:10:35,028 - INFO - Columns before mapping: ['Change %_overview', 'Div yield % (indicated)', 'Industries', 'Market cap', 'Stocks', 'Volume', 'Change %_performance', 'Perf %10Y', 'Perf %1M', 'Perf %1W', 'Perf %1Y', 'Perf %3M', 'Perf %5Y', 'Perf %6M', 'Perf %All Time', 'Perf %YTD', 'Sector']
+2026-01-01 13:10:35,028 - INFO - Columns after mapping: ['Change %_overview', 'div_yield_indicated', 'industries', 'market_cap', 'stocks', 'volume', 'Change %_performance', 'perf_10y', 'perf_1m', 'perf_1w', 'perf_1y', 'perf_3m', 'perf_5y', 'perf_6m', 'perf_all_time', 'perf_ytd', 'Sector']
+2026-01-01 13:10:35,428 - INFO - HTTP Request: GET https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?select=%2A&limit=1 "HTTP/2 200 OK"
+2026-01-01 13:10:35,433 - INFO - Supabase table columns: ['sector', 'market_cap', 'div_yield_indicated', 'change_pct', 'volume', 'industries', 'stocks', 'perf_1w', 'perf_1m', 'perf_3m', 'perf_6m', 'perf_ytd', 'perf_1y', 'perf_5y', 'perf_10y', 'perf_all_time', 'normalized_score_3m', 'normalized_score_6m', 'normalized_score_1y', 'macro_summary', 'short_term_classification', 'short_term_performance', 'short_term_catalysts', 'long_term_classification', 'long_term_performance', 'long_term_catalysts', 'upside_risks', 'downside_risks', 'quantitative_assessment', 'old_macro_call', 'updated_at', 'macro_rank', 'overall_rating', 'rationale', 'sector_atm_iv']
+2026-01-01 13:10:35,437 - INFO - Prepared 20 valid records for Supabase
+2026-01-01 13:10:35,635 - INFO - HTTP Request: DELETE https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=neq. "HTTP/2 200 OK"
+2026-01-01 13:10:35,640 - INFO - Cleared existing Supabase data
+2026-01-01 13:10:36,072 - INFO - HTTP Request: POST https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?columns=%22perf_all_time%22%2C%22change_pct%22%2C%22short_term_classification%22%2C%22perf_10y%22%2C%22perf_6m%22%2C%22long_term_classification%22%2C%22rationale%22%2C%22sector_atm_iv%22%2C%22perf_ytd%22%2C%22macro_summary%22%2C%22updated_at%22%2C%22market_cap%22%2C%22perf_1w%22%2C%22normalized_score_1y%22%2C%22div_yield_indicated%22%2C%22long_term_catalysts%22%2C%22sector%22%2C%22stocks%22%2C%22perf_3m%22%2C%22old_macro_call%22%2C%22industries%22%2C%22volume%22%2C%22macro_rank%22%2C%22overall_rating%22%2C%22perf_1y%22%2C%22normalized_score_3m%22%2C%22short_term_catalysts%22%2C%22long_term_performance%22%2C%22normalized_score_6m%22%2C%22perf_1m%22%2C%22downside_risks%22%2C%22quantitative_assessment%22%2C%22perf_5y%22%2C%22upside_risks%22%2C%22short_term_performance%22 "HTTP/2 201 Created"
+2026-01-01 13:10:36,077 - INFO - Inserted batch 1: 20 records
+2026-01-01 13:10:36,077 - INFO - Successfully saved 20 records to Supabase
+2026-01-01 13:10:36,077 - INFO - Data successfully saved to Supabase
+2026-01-01 13:10:36,077 - INFO - Sector data extraction completed successfully

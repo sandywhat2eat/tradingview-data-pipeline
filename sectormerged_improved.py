@@ -51,7 +51,7 @@ else:  # Server (Linux)
     load_dotenv('/root/.env')
 
 # Supabase configuration from environment variables
-supabase_url = "https://aisqbjjpdztnuerniefl.supabase.co"
+supabase_url = os.getenv('SUPABASE_URL') or "https://aisqbjjpdztnuerniefl.supabase.co"
 supabase_key = os.getenv('SUPABASE_SERVICE_ROLE_KEY') or os.getenv('SUPABASE_ANON_KEY')
 
 if not supabase_key:
@@ -70,27 +70,41 @@ TARGET_URL = "https://in.tradingview.com/markets/stocks-india/sectorandindustry-
 def setup_driver():
     """Sets up the Chrome WebDriver with optimized settings in headless mode"""
     options = webdriver.ChromeOptions()
-    # Use Chromium browser instead of Chrome
-    options.binary_location = "/usr/bin/chromium-browser"
-    options.add_argument("--headless=new")  # Run in headless mode
+
+    # Platform-specific settings
+    if platform.system() == 'Linux':
+        # Use Chromium browser on server
+        options.binary_location = "/usr/bin/chromium-browser"
+        options.add_argument("--headless=new")  # Run in headless mode
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--remote-debugging-port=9222")
+    else:
+        # macOS settings - use normal Chrome
+        options.add_argument("--headless=new")
+
+    # Common settings for all platforms
     options.add_argument("--disable-extensions")
-    options.add_argument("--no-sandbox")
-    options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
     options.add_argument("--disable-blink-features=AutomationControlled")
-    options.add_argument("--remote-debugging-port=9222")  # Required for headless mode
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option('useAutomationExtension', False)
-    
+
     # Add user agent to appear more like a real browser
     options.add_argument("--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
 
     try:
-        # Use Service class to specify chromedriver path
-        from selenium.webdriver.chrome.service import Service
-        service = Service(executable_path='/usr/bin/chromedriver')
-        driver = webdriver.Chrome(service=service, options=options)
+        # Initialize driver based on platform
+        if platform.system() == 'Linux':
+            # Server: use specific chromedriver path
+            from selenium.webdriver.chrome.service import Service
+            service = Service(executable_path='/usr/bin/chromedriver')
+            driver = webdriver.Chrome(service=service, options=options)
+        else:
+            # macOS: let selenium find chromedriver automatically
+            driver = webdriver.Chrome(options=options)
+
         driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         logging.info("WebDriver initialized successfully")
         return driver
