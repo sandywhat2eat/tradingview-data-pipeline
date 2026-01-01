@@ -51,14 +51,25 @@ def fetch_stock_data():
     """Fetch stock data from Supabase"""
     logging.info("Fetching stock data from Supabase...")
 
-    # Fetch all stock data
-    response = supabase.table('stock_data').select('*').execute()
+    # Fetch all records with pagination (Supabase default limit is 1000)
+    all_data = []
+    offset = 0
+    batch_size = 1000
 
-    if not response.data:
+    while True:
+        response = supabase.table('stock_data').select('*').range(offset, offset + batch_size - 1).execute()
+        if not response.data:
+            break
+        all_data.extend(response.data)
+        if len(response.data) < batch_size:
+            break
+        offset += batch_size
+
+    if not all_data:
         logging.error("No data found in stock_data table")
         return pd.DataFrame()
 
-    df = pd.DataFrame(response.data)
+    df = pd.DataFrame(all_data)
     logging.info(f"Fetched {len(df)} records from stock_data")
     return df
 
@@ -291,46 +302,40 @@ def hierarchical_normalize(data):
     return normalized_scores, data
 
 def update_stock_rankings(results):
-    """Update composite_score in Supabase stock_rankings table"""
-    logging.info("Updating stock_rankings in Supabase...")
+    """Update composite_score in Supabase stock_rankings table using batch upsert"""
+    logging.info("Updating stock_rankings in Supabase (batch mode)...")
 
+    update_time = datetime.now().isoformat()
+
+    # Prepare all records for batch upsert
+    records = []
+    for _, row in results.iterrows():
+        record = {
+            'symbol': row['symbol'],
+            'composite_score': float(round(row['composite_score'], 2)) if pd.notna(row['composite_score']) else None,
+            'update_date': update_time
+        }
+        if 'market_cap_category' in row and pd.notna(row.get('market_cap_category')):
+            record['market_cap_category'] = row['market_cap_category']
+        records.append(record)
+
+    # Batch upsert in chunks of 500
+    batch_size = 500
     success_count = 0
     error_count = 0
 
-    for _, row in results.iterrows():
+    for i in range(0, len(records), batch_size):
+        batch = records[i:i + batch_size]
         try:
-            symbol = row['symbol']
-            score = float(round(row['composite_score'], 2)) if pd.notna(row['composite_score']) else None
-            market_cap_category = row.get('market_cap_category')
-
-            update_data = {
-                'composite_score': score,
-                'update_date': datetime.now().isoformat()
-            }
-
-            if market_cap_category and pd.notna(market_cap_category):
-                update_data['market_cap_category'] = market_cap_category
-
-            # Try update first
-            response = supabase.table('stock_rankings').update(update_data).eq('symbol', symbol).execute()
-
-            # If no rows updated, try insert
-            if not response.data:
-                insert_data = {
-                    'symbol': symbol,
-                    **update_data
-                }
-                supabase.table('stock_rankings').insert(insert_data).execute()
-
-            success_count += 1
-
-            if success_count % 100 == 0:
-                logging.info(f"Updated {success_count} records...")
-
+            response = supabase.table('stock_rankings').upsert(
+                batch,
+                on_conflict='symbol'
+            ).execute()
+            success_count += len(batch)
+            logging.info(f"Batch {i//batch_size + 1}: Updated {len(batch)} records")
         except Exception as e:
-            error_count += 1
-            if error_count <= 5:  # Only log first 5 errors
-                logging.error(f"Error updating {row['symbol']}: {str(e)}")
+            error_count += len(batch)
+            logging.error(f"Batch {i//batch_size + 1} failed: {str(e)}")
 
     logging.info(f"Update complete: {success_count} successful, {error_count} errors")
     return success_count, error_count
