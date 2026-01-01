@@ -52,10 +52,10 @@ else:  # Server (Linux)
 
 # Supabase configuration from environment variables
 supabase_url = "https://aisqbjjpdztnuerniefl.supabase.co"
-supabase_key = os.getenv('SUPABASE_SERVICE_ROLE_KEY')
+supabase_key = os.getenv('SUPABASE_SERVICE_ROLE_KEY') or os.getenv('SUPABASE_ANON_KEY')
 
 if not supabase_key:
-    logging.error("SUPABASE_SERVICE_ROLE_KEY not found in environment variables")
+    logging.error("SUPABASE_SERVICE_ROLE_KEY or SUPABASE_ANON_KEY not found in environment variables")
     sys.exit(1)
 
 supabase: Client = create_client(supabase_url, supabase_key)
