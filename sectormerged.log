@@ -102,3 +102,34 @@ Stacktrace:
 2026-01-01 12:59:31,103 - ERROR - Failed to initialize WebDriver. Exiting.
 2026-01-01 12:59:31,103 - ERROR - Failed to extract any data
 2026-01-01 13:09:06,716 - INFO - Starting TradingView sector data extraction...
+2026-01-01 13:10:00,862 - INFO - Starting TradingView sector data extraction...
+2026-01-01 13:10:02,415 - INFO - WebDriver initialized successfully
+2026-01-01 13:10:02,415 - INFO - Navigating to base domain https://www.tradingview.com to set cookies.
+2026-01-01 13:10:13,892 - INFO - Extracted cookie list from 'cookies' key in cookies.json.
+2026-01-01 13:10:13,912 - INFO - Added 11 cookies out of 11 total cookies
+2026-01-01 13:10:13,912 - INFO - Navigating to target URL: https://in.tradingview.com/markets/stocks-india/sectorandindustry-sector/
+2026-01-01 13:10:29,710 - INFO - Successfully navigated to the sector page
+2026-01-01 13:10:29,762 - INFO - Initial screenshot saved to /Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_initial.png
+2026-01-01 13:10:29,783 - INFO - Extracting Overview data...
+2026-01-01 13:10:29,785 - INFO - JavaScript extraction for overview: Found 20 rows
+2026-01-01 13:10:29,788 - INFO - Overview columns: ['Change\xa0%', 'Div yield\xa0% (indicated)', 'Industries', 'Market cap', 'Sector', 'Stocks', 'Volume']
+2026-01-01 13:10:29,791 - INFO - Clicking on Performance tab...
+2026-01-01 13:10:34,896 - INFO - Performance tab screenshot saved to /Users/jaykrish/Documents/digitalocean/fixing/tradingview_pipeline/tradingview_performance.png
+2026-01-01 13:10:34,896 - INFO - Extracting Performance data...
+2026-01-01 13:10:34,899 - INFO - JavaScript extraction for performance: Found 20 rows
+2026-01-01 13:10:34,899 - INFO - Performance columns: ['Change\xa0%', 'Perf\xa0%10Y', 'Perf\xa0%1M', 'Perf\xa0%1W', 'Perf\xa0%1Y', 'Perf\xa0%3M', 'Perf\xa0%5Y', 'Perf\xa0%6M', 'Perf\xa0%All Time', 'Perf\xa0%YTD', 'Sector']
+2026-01-01 13:10:35,021 - INFO - WebDriver closed
+2026-01-01 13:10:35,026 - INFO - Merged dataframe has 20 rows and 17 columns
+2026-01-01 13:10:35,028 - INFO - Cleaned column names: ['Change %_overview', 'Div yield % (indicated)', 'Industries', 'Market cap', 'Stocks', 'Volume', 'Change %_performance', 'Perf %10Y', 'Perf %1M', 'Perf %1W', 'Perf %1Y', 'Perf %3M', 'Perf %5Y', 'Perf %6M', 'Perf %All Time', 'Perf %YTD', 'Sector']
+2026-01-01 13:10:35,028 - INFO - Columns before mapping: ['Change %_overview', 'Div yield % (indicated)', 'Industries', 'Market cap', 'Stocks', 'Volume', 'Change %_performance', 'Perf %10Y', 'Perf %1M', 'Perf %1W', 'Perf %1Y', 'Perf %3M', 'Perf %5Y', 'Perf %6M', 'Perf %All Time', 'Perf %YTD', 'Sector']
+2026-01-01 13:10:35,028 - INFO - Columns after mapping: ['Change %_overview', 'div_yield_indicated', 'industries', 'market_cap', 'stocks', 'volume', 'Change %_performance', 'perf_10y', 'perf_1m', 'perf_1w', 'perf_1y', 'perf_3m', 'perf_5y', 'perf_6m', 'perf_all_time', 'perf_ytd', 'Sector']
+2026-01-01 13:10:35,428 - INFO - HTTP Request: GET https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?select=%2A&limit=1 "HTTP/2 200 OK"
+2026-01-01 13:10:35,433 - INFO - Supabase table columns: ['sector', 'market_cap', 'div_yield_indicated', 'change_pct', 'volume', 'industries', 'stocks', 'perf_1w', 'perf_1m', 'perf_3m', 'perf_6m', 'perf_ytd', 'perf_1y', 'perf_5y', 'perf_10y', 'perf_all_time', 'normalized_score_3m', 'normalized_score_6m', 'normalized_score_1y', 'macro_summary', 'short_term_classification', 'short_term_performance', 'short_term_catalysts', 'long_term_classification', 'long_term_performance', 'long_term_catalysts', 'upside_risks', 'downside_risks', 'quantitative_assessment', 'old_macro_call', 'updated_at', 'macro_rank', 'overall_rating', 'rationale', 'sector_atm_iv']
+2026-01-01 13:10:35,437 - INFO - Prepared 20 valid records for Supabase
+2026-01-01 13:10:35,635 - INFO - HTTP Request: DELETE https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=neq. "HTTP/2 200 OK"
+2026-01-01 13:10:35,640 - INFO - Cleared existing Supabase data
+2026-01-01 13:10:36,072 - INFO - HTTP Request: POST https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?columns=%22perf_all_time%22%2C%22change_pct%22%2C%22short_term_classification%22%2C%22perf_10y%22%2C%22perf_6m%22%2C%22long_term_classification%22%2C%22rationale%22%2C%22sector_atm_iv%22%2C%22perf_ytd%22%2C%22macro_summary%22%2C%22updated_at%22%2C%22market_cap%22%2C%22perf_1w%22%2C%22normalized_score_1y%22%2C%22div_yield_indicated%22%2C%22long_term_catalysts%22%2C%22sector%22%2C%22stocks%22%2C%22perf_3m%22%2C%22old_macro_call%22%2C%22industries%22%2C%22volume%22%2C%22macro_rank%22%2C%22overall_rating%22%2C%22perf_1y%22%2C%22normalized_score_3m%22%2C%22short_term_catalysts%22%2C%22long_term_performance%22%2C%22normalized_score_6m%22%2C%22perf_1m%22%2C%22downside_risks%22%2C%22quantitative_assessment%22%2C%22perf_5y%22%2C%22upside_risks%22%2C%22short_term_performance%22 "HTTP/2 201 Created"
+2026-01-01 13:10:36,077 - INFO - Inserted batch 1: 20 records
+2026-01-01 13:10:36,077 - INFO - Successfully saved 20 records to Supabase
+2026-01-01 13:10:36,077 - INFO - Data successfully saved to Supabase
+2026-01-01 13:10:36,077 - INFO - Sector data extraction completed successfully

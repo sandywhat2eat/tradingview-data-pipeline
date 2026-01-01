@@ -61,3 +61,54 @@
 2026-01-01 13:07:48,637 - INFO - Updated scores for sector: Electronic Technology
 2026-01-01 13:07:48,637 - INFO - Successfully updated 20 sector scores in Supabase. 0 errors.
 2026-01-01 13:07:48,638 - INFO - Script execution completed successfully
+2026-01-01 13:14:35,503 - INFO - Script execution started
+2026-01-01 13:14:35,503 - INFO - Starting sector score calculation...
+2026-01-01 13:14:35,503 - INFO - Fetching data from Supabase...
+2026-01-01 13:14:35,753 - INFO - HTTP Request: GET https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?select=%2A "HTTP/2 200 OK"
+2026-01-01 13:14:35,764 - INFO - Fetched 20 records from sector_data table.
+2026-01-01 13:14:35,765 - INFO - Cleaning and converting data...
+2026-01-01 13:14:35,767 - INFO - Normalizing data...
+2026-01-01 13:14:35,769 - INFO - Calculating normalized scores...
+2026-01-01 13:14:35,771 - INFO - Updating Supabase with normalized scores...
+2026-01-01 13:14:35,956 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Producer+Manufacturing "HTTP/2 200 OK"
+2026-01-01 13:14:35,957 - INFO - Updated scores for sector: Producer Manufacturing
+2026-01-01 13:14:36,124 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Retail+Trade "HTTP/2 200 OK"
+2026-01-01 13:14:36,127 - INFO - Updated scores for sector: Retail Trade
+2026-01-01 13:14:36,304 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Technology+Services "HTTP/2 200 OK"
+2026-01-01 13:14:36,305 - INFO - Updated scores for sector: Technology Services
+2026-01-01 13:14:36,467 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Transportation "HTTP/2 200 OK"
+2026-01-01 13:14:36,468 - INFO - Updated scores for sector: Transportation
+2026-01-01 13:14:36,638 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Utilities "HTTP/2 200 OK"
+2026-01-01 13:14:36,639 - INFO - Updated scores for sector: Utilities
+2026-01-01 13:14:36,802 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Commercial+Services "HTTP/2 200 OK"
+2026-01-01 13:14:36,803 - INFO - Updated scores for sector: Commercial Services
+2026-01-01 13:14:36,993 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Communications "HTTP/2 200 OK"
+2026-01-01 13:14:36,995 - INFO - Updated scores for sector: Communications
+2026-01-01 13:14:37,151 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Consumer+Durables "HTTP/2 200 OK"
+2026-01-01 13:14:37,152 - INFO - Updated scores for sector: Consumer Durables
+2026-01-01 13:14:37,323 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Consumer+Non-Durables "HTTP/2 200 OK"
+2026-01-01 13:14:37,326 - INFO - Updated scores for sector: Consumer Non-Durables
+2026-01-01 13:14:37,482 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Consumer+Services "HTTP/2 200 OK"
+2026-01-01 13:14:37,484 - INFO - Updated scores for sector: Consumer Services
+2026-01-01 13:14:37,635 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Distribution+Services "HTTP/2 200 OK"
+2026-01-01 13:14:37,637 - INFO - Updated scores for sector: Distribution Services
+2026-01-01 13:14:37,796 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Electronic+Technology "HTTP/2 200 OK"
+2026-01-01 13:14:37,800 - INFO - Updated scores for sector: Electronic Technology
+2026-01-01 13:14:37,955 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Energy+Minerals "HTTP/2 200 OK"
+2026-01-01 13:14:37,958 - INFO - Updated scores for sector: Energy Minerals
+2026-01-01 13:14:38,119 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Finance "HTTP/2 200 OK"
+2026-01-01 13:14:38,120 - INFO - Updated scores for sector: Finance
+2026-01-01 13:14:38,283 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Health+Services "HTTP/2 200 OK"
+2026-01-01 13:14:38,285 - INFO - Updated scores for sector: Health Services
+2026-01-01 13:14:38,472 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Health+Technology "HTTP/2 200 OK"
+2026-01-01 13:14:38,476 - INFO - Updated scores for sector: Health Technology
+2026-01-01 13:14:38,681 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Industrial+Services "HTTP/2 200 OK"
+2026-01-01 13:14:38,683 - INFO - Updated scores for sector: Industrial Services
+2026-01-01 13:14:38,837 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Miscellaneous "HTTP/2 200 OK"
+2026-01-01 13:14:38,838 - INFO - Updated scores for sector: Miscellaneous
+2026-01-01 13:14:39,018 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Non-Energy+Minerals "HTTP/2 200 OK"
+2026-01-01 13:14:39,020 - INFO - Updated scores for sector: Non-Energy Minerals
+2026-01-01 13:14:39,183 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/sector_data?sector=eq.Process+Industries "HTTP/2 200 OK"
+2026-01-01 13:14:39,185 - INFO - Updated scores for sector: Process Industries
+2026-01-01 13:14:39,185 - INFO - Successfully updated 20 sector scores in Supabase. 0 errors.
+2026-01-01 13:14:39,185 - INFO - Script execution completed successfully

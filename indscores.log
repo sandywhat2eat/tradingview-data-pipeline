@@ -261,3 +261,253 @@
 2026-01-01 13:07:44,471 - INFO - Updated scores for industry: Financial Publishing/Services
 2026-01-01 13:07:44,471 - INFO - Successfully updated 119 industry scores in Supabase. 0 errors.
 2026-01-01 13:07:44,472 - INFO - Script execution completed successfully
+2026-01-01 13:14:03,331 - INFO - Script execution started
+2026-01-01 13:14:03,331 - INFO - Starting industry score calculation...
+2026-01-01 13:14:03,331 - INFO - Fetching data from Supabase...
+2026-01-01 13:14:03,703 - INFO - HTTP Request: GET https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?select=%2A "HTTP/2 200 OK"
+2026-01-01 13:14:03,716 - INFO - Fetched 119 records from industry_data table.
+2026-01-01 13:14:03,716 - INFO - Cleaning and converting data...
+2026-01-01 13:14:03,723 - INFO - Normalizing data...
+2026-01-01 13:14:03,726 - INFO - Calculating normalized scores...
+2026-01-01 13:14:03,730 - INFO - Data cleaned and normalized.
+2026-01-01 13:14:03,730 - INFO - Updating Supabase with normalized scores...
+2026-01-01 13:14:04,125 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Hospital%2FNursing+Management "HTTP/2 200 OK"
+2026-01-01 13:14:04,126 - INFO - Updated scores for industry: Hospital/Nursing Management
+2026-01-01 13:14:04,358 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Hotels%2FResorts%2FCruise+lines "HTTP/2 200 OK"
+2026-01-01 13:14:04,360 - INFO - Updated scores for industry: Hotels/Resorts/Cruise lines
+2026-01-01 13:14:04,621 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Household%2FPersonal+Care "HTTP/2 200 OK"
+2026-01-01 13:14:04,622 - INFO - Updated scores for industry: Household/Personal Care
+2026-01-01 13:14:04,863 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Industrial+Conglomerates "HTTP/2 200 OK"
+2026-01-01 13:14:04,868 - INFO - Updated scores for industry: Industrial Conglomerates
+2026-01-01 13:14:05,053 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Industrial+Machinery "HTTP/2 200 OK"
+2026-01-01 13:14:05,054 - INFO - Updated scores for industry: Industrial Machinery
+2026-01-01 13:14:06,089 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Industrial+Specialties "HTTP/2 200 OK"
+2026-01-01 13:14:06,090 - INFO - Updated scores for industry: Industrial Specialties
+2026-01-01 13:14:06,300 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Information+Technology+Services "HTTP/2 200 OK"
+2026-01-01 13:14:06,300 - INFO - Updated scores for industry: Information Technology Services
+2026-01-01 13:14:06,448 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Internet+Software%2FServices "HTTP/2 200 OK"
+2026-01-01 13:14:06,450 - INFO - Updated scores for industry: Internet Software/Services
+2026-01-01 13:14:06,638 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Investment+Banks%2FBrokers "HTTP/2 200 OK"
+2026-01-01 13:14:06,638 - INFO - Updated scores for industry: Investment Banks/Brokers
+2026-01-01 13:14:06,852 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Investment+Managers "HTTP/2 200 OK"
+2026-01-01 13:14:06,852 - INFO - Updated scores for industry: Investment Managers
+2026-01-01 13:14:07,054 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Investment+Trusts%2FMutual+Funds "HTTP/2 200 OK"
+2026-01-01 13:14:07,057 - INFO - Updated scores for industry: Investment Trusts/Mutual Funds
+2026-01-01 13:14:07,222 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Life%2FHealth+Insurance "HTTP/2 200 OK"
+2026-01-01 13:14:07,222 - INFO - Updated scores for industry: Life/Health Insurance
+2026-01-01 13:14:07,384 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Major+Banks "HTTP/2 200 OK"
+2026-01-01 13:14:07,385 - INFO - Updated scores for industry: Major Banks
+2026-01-01 13:14:07,594 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Major+Telecommunications "HTTP/2 200 OK"
+2026-01-01 13:14:07,594 - INFO - Updated scores for industry: Major Telecommunications
+2026-01-01 13:14:07,749 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Marine+Shipping "HTTP/2 200 OK"
+2026-01-01 13:14:07,750 - INFO - Updated scores for industry: Marine Shipping
+2026-01-01 13:14:07,913 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Medical+Distributors "HTTP/2 200 OK"
+2026-01-01 13:14:07,915 - INFO - Updated scores for industry: Medical Distributors
+2026-01-01 13:14:08,131 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Medical+Specialties "HTTP/2 200 OK"
+2026-01-01 13:14:08,132 - INFO - Updated scores for industry: Medical Specialties
+2026-01-01 13:14:08,338 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Medical%2FNursing+Services "HTTP/2 200 OK"
+2026-01-01 13:14:08,339 - INFO - Updated scores for industry: Medical/Nursing Services
+2026-01-01 13:14:08,535 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Metal+Fabrication "HTTP/2 200 OK"
+2026-01-01 13:14:08,537 - INFO - Updated scores for industry: Metal Fabrication
+2026-01-01 13:14:08,706 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Miscellaneous "HTTP/2 200 OK"
+2026-01-01 13:14:08,707 - INFO - Updated scores for industry: Miscellaneous
+2026-01-01 13:14:08,874 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Miscellaneous+Commercial+Services "HTTP/2 200 OK"
+2026-01-01 13:14:08,876 - INFO - Updated scores for industry: Miscellaneous Commercial Services
+2026-01-01 13:14:09,066 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Miscellaneous+Manufacturing "HTTP/2 200 OK"
+2026-01-01 13:14:09,067 - INFO - Updated scores for industry: Miscellaneous Manufacturing
+2026-01-01 13:14:09,241 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Motor+Vehicles "HTTP/2 200 OK"
+2026-01-01 13:14:09,242 - INFO - Updated scores for industry: Motor Vehicles
+2026-01-01 13:14:09,448 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Movies%2FEntertainment "HTTP/2 200 OK"
+2026-01-01 13:14:09,449 - INFO - Updated scores for industry: Movies/Entertainment
+2026-01-01 13:14:09,606 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Multi-Line+Insurance "HTTP/2 200 OK"
+2026-01-01 13:14:09,607 - INFO - Updated scores for industry: Multi-Line Insurance
+2026-01-01 13:14:09,787 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Office+Equipment%2FSupplies "HTTP/2 200 OK"
+2026-01-01 13:14:09,788 - INFO - Updated scores for industry: Office Equipment/Supplies
+2026-01-01 13:14:09,950 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Oil+%26+Gas+Pipelines "HTTP/2 200 OK"
+2026-01-01 13:14:09,951 - INFO - Updated scores for industry: Oil & Gas Pipelines
+2026-01-01 13:14:10,111 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Oil+%26+Gas+Production "HTTP/2 200 OK"
+2026-01-01 13:14:10,112 - INFO - Updated scores for industry: Oil & Gas Production
+2026-01-01 13:14:10,270 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Oil+Refining%2FMarketing "HTTP/2 200 OK"
+2026-01-01 13:14:10,271 - INFO - Updated scores for industry: Oil Refining/Marketing
+2026-01-01 13:14:10,430 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Oilfield+Services%2FEquipment "HTTP/2 200 OK"
+2026-01-01 13:14:10,431 - INFO - Updated scores for industry: Oilfield Services/Equipment
+2026-01-01 13:14:10,633 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Other+Consumer+Services "HTTP/2 200 OK"
+2026-01-01 13:14:10,634 - INFO - Updated scores for industry: Other Consumer Services
+2026-01-01 13:14:10,800 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Other+Consumer+Specialties "HTTP/2 200 OK"
+2026-01-01 13:14:10,801 - INFO - Updated scores for industry: Other Consumer Specialties
+2026-01-01 13:14:10,959 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Other+Metals%2FMinerals "HTTP/2 200 OK"
+2026-01-01 13:14:10,960 - INFO - Updated scores for industry: Other Metals/Minerals
+2026-01-01 13:14:11,118 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Other+Transportation "HTTP/2 200 OK"
+2026-01-01 13:14:11,119 - INFO - Updated scores for industry: Other Transportation
+2026-01-01 13:14:11,266 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Packaged+Software "HTTP/2 200 OK"
+2026-01-01 13:14:11,267 - INFO - Updated scores for industry: Packaged Software
+2026-01-01 13:14:11,419 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Integrated+Oil "HTTP/2 200 OK"
+2026-01-01 13:14:11,421 - INFO - Updated scores for industry: Integrated Oil
+2026-01-01 13:14:11,589 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Internet+Retail "HTTP/2 200 OK"
+2026-01-01 13:14:11,590 - INFO - Updated scores for industry: Internet Retail
+2026-01-01 13:14:11,758 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Personnel+Services "HTTP/2 200 OK"
+2026-01-01 13:14:11,759 - INFO - Updated scores for industry: Personnel Services
+2026-01-01 13:14:11,973 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Pharmaceuticals%3A+Generic "HTTP/2 200 OK"
+2026-01-01 13:14:11,974 - INFO - Updated scores for industry: Pharmaceuticals: Generic
+2026-01-01 13:14:12,143 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Pharmaceuticals%3A+Major "HTTP/2 200 OK"
+2026-01-01 13:14:12,144 - INFO - Updated scores for industry: Pharmaceuticals: Major
+2026-01-01 13:14:12,491 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Pharmaceuticals%3A+Other "HTTP/2 200 OK"
+2026-01-01 13:14:12,493 - INFO - Updated scores for industry: Pharmaceuticals: Other
+2026-01-01 13:14:12,670 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Publishing%3A+Books%2FMagazines "HTTP/2 200 OK"
+2026-01-01 13:14:12,671 - INFO - Updated scores for industry: Publishing: Books/Magazines
+2026-01-01 13:14:12,824 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Publishing%3A+Newspapers "HTTP/2 200 OK"
+2026-01-01 13:14:12,825 - INFO - Updated scores for industry: Publishing: Newspapers
+2026-01-01 13:14:12,989 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Pulp+%26+Paper "HTTP/2 200 OK"
+2026-01-01 13:14:12,990 - INFO - Updated scores for industry: Pulp & Paper
+2026-01-01 13:14:13,143 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Railroads "HTTP/2 200 OK"
+2026-01-01 13:14:13,144 - INFO - Updated scores for industry: Railroads
+2026-01-01 13:14:13,364 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Wireless+Telecommunications "HTTP/2 200 OK"
+2026-01-01 13:14:13,365 - INFO - Updated scores for industry: Wireless Telecommunications
+2026-01-01 13:14:13,525 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Real+Estate+Development "HTTP/2 200 OK"
+2026-01-01 13:14:13,526 - INFO - Updated scores for industry: Real Estate Development
+2026-01-01 13:14:13,709 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Real+Estate+Investment+Trusts "HTTP/2 200 OK"
+2026-01-01 13:14:13,710 - INFO - Updated scores for industry: Real Estate Investment Trusts
+2026-01-01 13:14:13,870 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Recreational+Products "HTTP/2 200 OK"
+2026-01-01 13:14:13,870 - INFO - Updated scores for industry: Recreational Products
+2026-01-01 13:14:14,057 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Regional+Banks "HTTP/2 200 OK"
+2026-01-01 13:14:14,057 - INFO - Updated scores for industry: Regional Banks
+2026-01-01 13:14:14,251 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Restaurants "HTTP/2 200 OK"
+2026-01-01 13:14:14,252 - INFO - Updated scores for industry: Restaurants
+2026-01-01 13:14:14,502 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Semiconductors "HTTP/2 200 OK"
+2026-01-01 13:14:14,503 - INFO - Updated scores for industry: Semiconductors
+2026-01-01 13:14:14,669 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Specialty+Insurance "HTTP/2 200 OK"
+2026-01-01 13:14:14,670 - INFO - Updated scores for industry: Specialty Insurance
+2026-01-01 13:14:14,853 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Specialty+Stores "HTTP/2 200 OK"
+2026-01-01 13:14:14,854 - INFO - Updated scores for industry: Specialty Stores
+2026-01-01 13:14:15,008 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Specialty+Telecommunications "HTTP/2 200 OK"
+2026-01-01 13:14:15,009 - INFO - Updated scores for industry: Specialty Telecommunications
+2026-01-01 13:14:15,177 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Steel "HTTP/2 200 OK"
+2026-01-01 13:14:15,178 - INFO - Updated scores for industry: Steel
+2026-01-01 13:14:15,349 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Telecommunications+Equipment "HTTP/2 200 OK"
+2026-01-01 13:14:15,349 - INFO - Updated scores for industry: Telecommunications Equipment
+2026-01-01 13:14:15,507 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Textiles "HTTP/2 200 OK"
+2026-01-01 13:14:15,516 - INFO - Updated scores for industry: Textiles
+2026-01-01 13:14:15,693 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Tobacco "HTTP/2 200 OK"
+2026-01-01 13:14:15,694 - INFO - Updated scores for industry: Tobacco
+2026-01-01 13:14:15,910 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Tools+%26+Hardware "HTTP/2 200 OK"
+2026-01-01 13:14:15,913 - INFO - Updated scores for industry: Tools & Hardware
+2026-01-01 13:14:16,065 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Trucking "HTTP/2 200 OK"
+2026-01-01 13:14:16,066 - INFO - Updated scores for industry: Trucking
+2026-01-01 13:14:16,227 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Trucks%2FConstruction%2FFarm+Machinery "HTTP/2 200 OK"
+2026-01-01 13:14:16,227 - INFO - Updated scores for industry: Trucks/Construction/Farm Machinery
+2026-01-01 13:14:16,387 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Water+Utilities "HTTP/2 200 OK"
+2026-01-01 13:14:16,388 - INFO - Updated scores for industry: Water Utilities
+2026-01-01 13:14:16,547 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Wholesale+Distributors "HTTP/2 200 OK"
+2026-01-01 13:14:16,549 - INFO - Updated scores for industry: Wholesale Distributors
+2026-01-01 13:14:16,711 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Advertising%2FMarketing+Services "HTTP/2 200 OK"
+2026-01-01 13:14:16,712 - INFO - Updated scores for industry: Advertising/Marketing Services
+2026-01-01 13:14:16,870 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Aerospace+%26+Defense "HTTP/2 200 OK"
+2026-01-01 13:14:16,870 - INFO - Updated scores for industry: Aerospace & Defense
+2026-01-01 13:14:17,028 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Agricultural+Commodities%2FMilling "HTTP/2 200 OK"
+2026-01-01 13:14:17,029 - INFO - Updated scores for industry: Agricultural Commodities/Milling
+2026-01-01 13:14:17,188 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Air+Freight%2FCouriers "HTTP/2 200 OK"
+2026-01-01 13:14:17,189 - INFO - Updated scores for industry: Air Freight/Couriers
+2026-01-01 13:14:17,353 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Airlines "HTTP/2 200 OK"
+2026-01-01 13:14:17,355 - INFO - Updated scores for industry: Airlines
+2026-01-01 13:14:17,506 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Alternative+Power+Generation "HTTP/2 200 OK"
+2026-01-01 13:14:17,506 - INFO - Updated scores for industry: Alternative Power Generation
+2026-01-01 13:14:17,688 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Aluminum "HTTP/2 200 OK"
+2026-01-01 13:14:17,688 - INFO - Updated scores for industry: Aluminum
+2026-01-01 13:14:17,848 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Apparel%2FFootwear "HTTP/2 200 OK"
+2026-01-01 13:14:17,849 - INFO - Updated scores for industry: Apparel/Footwear
+2026-01-01 13:14:18,025 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Apparel%2FFootwear+Retail "HTTP/2 200 OK"
+2026-01-01 13:14:18,029 - INFO - Updated scores for industry: Apparel/Footwear Retail
+2026-01-01 13:14:18,188 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Auto+Parts%3A+OEM "HTTP/2 200 OK"
+2026-01-01 13:14:18,190 - INFO - Updated scores for industry: Auto Parts: OEM
+2026-01-01 13:14:18,358 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Automotive+Aftermarket "HTTP/2 200 OK"
+2026-01-01 13:14:18,360 - INFO - Updated scores for industry: Automotive Aftermarket
+2026-01-01 13:14:18,520 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Beverages%3A+Alcoholic "HTTP/2 200 OK"
+2026-01-01 13:14:18,522 - INFO - Updated scores for industry: Beverages: Alcoholic
+2026-01-01 13:14:18,688 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Beverages%3A+Non-Alcoholic "HTTP/2 200 OK"
+2026-01-01 13:14:18,689 - INFO - Updated scores for industry: Beverages: Non-Alcoholic
+2026-01-01 13:14:18,860 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Biotechnology "HTTP/2 200 OK"
+2026-01-01 13:14:18,862 - INFO - Updated scores for industry: Biotechnology
+2026-01-01 13:14:19,040 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Broadcasting "HTTP/2 200 OK"
+2026-01-01 13:14:19,041 - INFO - Updated scores for industry: Broadcasting
+2026-01-01 13:14:19,214 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Building+Products "HTTP/2 200 OK"
+2026-01-01 13:14:19,216 - INFO - Updated scores for industry: Building Products
+2026-01-01 13:14:19,391 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Cable%2FSatellite+TV "HTTP/2 200 OK"
+2026-01-01 13:14:19,393 - INFO - Updated scores for industry: Cable/Satellite TV
+2026-01-01 13:14:19,570 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Catalog%2FSpecialty+Distribution "HTTP/2 200 OK"
+2026-01-01 13:14:19,571 - INFO - Updated scores for industry: Catalog/Specialty Distribution
+2026-01-01 13:14:19,738 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Chemicals%3A+Agricultural "HTTP/2 200 OK"
+2026-01-01 13:14:19,739 - INFO - Updated scores for industry: Chemicals: Agricultural
+2026-01-01 13:14:19,891 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Chemicals%3A+Major+Diversified "HTTP/2 200 OK"
+2026-01-01 13:14:19,892 - INFO - Updated scores for industry: Chemicals: Major Diversified
+2026-01-01 13:14:20,103 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Chemicals%3A+Specialty "HTTP/2 200 OK"
+2026-01-01 13:14:20,104 - INFO - Updated scores for industry: Chemicals: Specialty
+2026-01-01 13:14:20,291 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Coal "HTTP/2 200 OK"
+2026-01-01 13:14:20,294 - INFO - Updated scores for industry: Coal
+2026-01-01 13:14:20,446 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Commercial+Printing%2FForms "HTTP/2 200 OK"
+2026-01-01 13:14:20,446 - INFO - Updated scores for industry: Commercial Printing/Forms
+2026-01-01 13:14:20,617 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Computer+Communications "HTTP/2 200 OK"
+2026-01-01 13:14:20,618 - INFO - Updated scores for industry: Computer Communications
+2026-01-01 13:14:20,810 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Computer+Peripherals "HTTP/2 200 OK"
+2026-01-01 13:14:20,811 - INFO - Updated scores for industry: Computer Peripherals
+2026-01-01 13:14:20,966 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Construction+Materials "HTTP/2 200 OK"
+2026-01-01 13:14:20,968 - INFO - Updated scores for industry: Construction Materials
+2026-01-01 13:14:21,120 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Consumer+Sundries "HTTP/2 200 OK"
+2026-01-01 13:14:21,121 - INFO - Updated scores for industry: Consumer Sundries
+2026-01-01 13:14:21,303 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Containers%2FPackaging "HTTP/2 200 OK"
+2026-01-01 13:14:21,304 - INFO - Updated scores for industry: Containers/Packaging
+2026-01-01 13:14:21,481 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Contract+Drilling "HTTP/2 200 OK"
+2026-01-01 13:14:21,483 - INFO - Updated scores for industry: Contract Drilling
+2026-01-01 13:14:21,644 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Data+Processing+Services "HTTP/2 200 OK"
+2026-01-01 13:14:21,645 - INFO - Updated scores for industry: Data Processing Services
+2026-01-01 13:14:21,799 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Department+Stores "HTTP/2 200 OK"
+2026-01-01 13:14:21,802 - INFO - Updated scores for industry: Department Stores
+2026-01-01 13:14:21,951 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Drugstore+Chains "HTTP/2 200 OK"
+2026-01-01 13:14:21,954 - INFO - Updated scores for industry: Drugstore Chains
+2026-01-01 13:14:22,108 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electric+Utilities "HTTP/2 200 OK"
+2026-01-01 13:14:22,110 - INFO - Updated scores for industry: Electric Utilities
+2026-01-01 13:14:22,272 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electrical+Products "HTTP/2 200 OK"
+2026-01-01 13:14:22,273 - INFO - Updated scores for industry: Electrical Products
+2026-01-01 13:14:22,454 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronic+Components "HTTP/2 200 OK"
+2026-01-01 13:14:22,455 - INFO - Updated scores for industry: Electronic Components
+2026-01-01 13:14:22,609 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronic+Equipment%2FInstruments "HTTP/2 200 OK"
+2026-01-01 13:14:22,610 - INFO - Updated scores for industry: Electronic Equipment/Instruments
+2026-01-01 13:14:22,800 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronic+Production+Equipment "HTTP/2 200 OK"
+2026-01-01 13:14:22,801 - INFO - Updated scores for industry: Electronic Production Equipment
+2026-01-01 13:14:22,961 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronics+Distributors "HTTP/2 200 OK"
+2026-01-01 13:14:22,963 - INFO - Updated scores for industry: Electronics Distributors
+2026-01-01 13:14:23,129 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronics%2FAppliance+Stores "HTTP/2 200 OK"
+2026-01-01 13:14:23,129 - INFO - Updated scores for industry: Electronics/Appliance Stores
+2026-01-01 13:14:23,342 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Electronics%2FAppliances "HTTP/2 200 OK"
+2026-01-01 13:14:23,343 - INFO - Updated scores for industry: Electronics/Appliances
+2026-01-01 13:14:23,503 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Engineering+%26+Construction "HTTP/2 200 OK"
+2026-01-01 13:14:23,504 - INFO - Updated scores for industry: Engineering & Construction
+2026-01-01 13:14:23,665 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Environmental+Services "HTTP/2 200 OK"
+2026-01-01 13:14:23,666 - INFO - Updated scores for industry: Environmental Services
+2026-01-01 13:14:23,818 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Finance%2FRental%2FLeasing "HTTP/2 200 OK"
+2026-01-01 13:14:23,819 - INFO - Updated scores for industry: Finance/Rental/Leasing
+2026-01-01 13:14:24,006 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Financial+Conglomerates "HTTP/2 200 OK"
+2026-01-01 13:14:24,006 - INFO - Updated scores for industry: Financial Conglomerates
+2026-01-01 13:14:24,186 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Financial+Publishing%2FServices "HTTP/2 200 OK"
+2026-01-01 13:14:24,187 - INFO - Updated scores for industry: Financial Publishing/Services
+2026-01-01 13:14:24,338 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Food+Distributors "HTTP/2 200 OK"
+2026-01-01 13:14:24,339 - INFO - Updated scores for industry: Food Distributors
+2026-01-01 13:14:24,490 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Food+Retail "HTTP/2 200 OK"
+2026-01-01 13:14:24,491 - INFO - Updated scores for industry: Food Retail
+2026-01-01 13:14:24,666 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Food%3A+Major+Diversified "HTTP/2 200 OK"
+2026-01-01 13:14:24,667 - INFO - Updated scores for industry: Food: Major Diversified
+2026-01-01 13:14:24,840 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Food%3A+Meat%2FFish%2FDairy "HTTP/2 200 OK"
+2026-01-01 13:14:24,841 - INFO - Updated scores for industry: Food: Meat/Fish/Dairy
+2026-01-01 13:14:25,026 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Food%3A+Specialty%2FCandy "HTTP/2 200 OK"
+2026-01-01 13:14:25,026 - INFO - Updated scores for industry: Food: Specialty/Candy
+2026-01-01 13:14:25,187 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Forest+Products "HTTP/2 200 OK"
+2026-01-01 13:14:25,188 - INFO - Updated scores for industry: Forest Products
+2026-01-01 13:14:25,472 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Gas+Distributors "HTTP/2 200 OK"
+2026-01-01 13:14:25,473 - INFO - Updated scores for industry: Gas Distributors
+2026-01-01 13:14:25,654 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Home+Furnishings "HTTP/2 200 OK"
+2026-01-01 13:14:25,654 - INFO - Updated scores for industry: Home Furnishings
+2026-01-01 13:14:25,816 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Home+Improvement+Chains "HTTP/2 200 OK"
+2026-01-01 13:14:25,816 - INFO - Updated scores for industry: Home Improvement Chains
+2026-01-01 13:14:25,987 - INFO - HTTP Request: PATCH https://aisqbjjpdztnuerniefl.supabase.co/rest/v1/industry_data?industry=eq.Homebuilding "HTTP/2 200 OK"
+2026-01-01 13:14:25,988 - INFO - Updated scores for industry: Homebuilding
+2026-01-01 13:14:25,989 - INFO - Successfully updated 119 industry scores in Supabase. 0 errors.
+2026-01-01 13:14:25,989 - INFO - Script execution completed successfully
