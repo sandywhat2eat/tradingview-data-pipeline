@@ -276,5 +276,48 @@ def main():
             driver.quit()
             logging.info("WebDriver closed")
 
+def run_subsequent_scripts():
+    """Run upload and score calculation scripts after download completes"""
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    scripts = ['funda_uploadtodb.py', 'calfundamentalscore.py']
+
+    for script in scripts:
+        try:
+            script_path = os.path.join(SCRIPT_DIR, script)
+            if not os.path.exists(script_path):
+                logging.error(f"Script not found: {script_path}")
+                continue
+
+            logging.info("=" * 50)
+            logging.info(f"Starting {script}...")
+            logging.info("=" * 50)
+
+            # Run the script and capture output
+            result = subprocess.run(
+                [sys.executable, script_path],
+                check=False,
+                capture_output=True,
+                text=True,
+                cwd=SCRIPT_DIR
+            )
+
+            # Log the output
+            if result.stdout:
+                logging.info(f"{script} output:\n{result.stdout}")
+            if result.stderr:
+                logging.error(f"{script} errors:\n{result.stderr}")
+
+            logging.info(f"{script} completed with return code: {result.returncode}")
+
+        except Exception as e:
+            logging.error(f"Error running {script}: {str(e)}")
+
+        # Add a small delay between script executions
+        time.sleep(2)
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    finally:
+        # Always run the subsequent scripts, even if main() fails
+        run_subsequent_scripts()
